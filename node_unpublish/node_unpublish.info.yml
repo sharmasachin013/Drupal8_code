@@ -1,0 +1,4 @@
+name: Node unpublish
+type: module
+description: Node unpublish using custom module.
+core: 8.x
