@@ -1,0 +1,4 @@
+name: Ajax Example
+type: module
+core: '8.x'
+description: 'Custom db'

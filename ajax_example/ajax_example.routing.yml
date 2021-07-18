@@ -1,0 +1,7 @@
+custom_db_form:
+  path: '/ajax/demo'
+  defaults:
+    _form: '\Drupal\ajax_example\Form\Ajaxexample'
+    _title: 'Ajax Example'
+  requirements:
+    _permission: 'access content'
