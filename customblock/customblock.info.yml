@@ -1,0 +1,4 @@
+name: Custom Block for Form
+type: module
+core: '8.x'
+description: 'Custom Block for Form'
