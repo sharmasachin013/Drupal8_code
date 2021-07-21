@@ -1,5 +1,5 @@
 custom_config.settings_form:
   title: 'My Custom SettingsForm'
   route_name: custom_config.settings_form
-  description: 'A description for the menu entry'
+  description: 'the menu entry for settings form'
   parent: system.admin_config_system
