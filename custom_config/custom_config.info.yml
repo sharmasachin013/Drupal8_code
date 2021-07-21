@@ -1,5 +1,5 @@
 name: Custom Config
 type: module
-description: My Custom Module
+description: My Custom Module for config
 core_version_requirement: ^8 || ^9
 package: Custom
