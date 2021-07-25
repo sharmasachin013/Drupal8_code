@@ -1,0 +1,15 @@
+without_di_current_user:
+  path: '/without/di/current/user'
+  defaults:
+    _form: '\Drupal\example_dependency_injection\Form\without_di_current_user'
+    _title: 'Form'
+  requirements:
+   _permission: 'access content'
+
+with_di_current_user:
+  path: '/with/di/current/user'
+  defaults:
+    _form: '\Drupal\example_dependency_injection\Form\with_di_current_user'
+    _title: 'Form'
+  requirements:
+   _permission: 'access content'
