@@ -1,0 +1,7 @@
+custom_db_form:
+  path: '/customdbform/demo/services'
+  defaults:
+    _form: '\Drupal\dependency_injection_services\Form\customForm'
+    _title: 'Services and dependency injection'
+  requirements:
+    _permission: 'access content'
