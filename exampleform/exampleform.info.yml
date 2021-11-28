@@ -1,0 +1,5 @@
+name: Example form
+description: Custom module for learning Drupal 8
+type: module
+core_version_requirement: ^8.8 || ^9
+package: Custom
