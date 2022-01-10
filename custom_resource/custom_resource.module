@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_resource.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function custom_resource_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the custom_resource module.
+    case 'help.page.custom_resource':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('My custom resource example') . '</p>';
+      return $output;
+
+    default:
+  }
+}

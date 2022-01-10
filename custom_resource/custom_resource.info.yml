@@ -1,0 +1,5 @@
+name: "custom_resource"
+type: module
+description: "My custom resource example"
+core_version_requirement: ^8.8 || ^9
+package: "Custom"
