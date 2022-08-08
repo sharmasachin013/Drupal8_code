@@ -1,0 +1,7 @@
+name: "ckeditor_div"
+type: module
+description: "My Awesome Module"
+package: "Custom"
+core_version_requirement: ^8 || ^9
+dependencies:
+  - ckeditor
