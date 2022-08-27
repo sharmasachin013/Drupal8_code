@@ -1,0 +1,7 @@
+weather_style:
+  version: VERSION
+  js:
+    js/custom.js: {}
+  css:
+    component:
+      css/style.css: {}

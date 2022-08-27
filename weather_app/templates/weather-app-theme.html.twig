@@ -1,0 +1,25 @@
+<div class="weather">
+	<input type="search" list="suggestions" id="search" class="weather_search" placeholder="Enter Your City Name">
+	<datalist id="suggestions"></datalist>
+
+	<div class="weather_today">
+		<div class="weather_details">
+			<h2 class="weather_city">City</h2>
+			<p class="weather_day">Day</p>
+			<div class="weather_current">
+				<p class="weather_indicator weather_indicator--humidity">
+					<span class="value">50</span>%</p>
+				<p class="weather_indicator weather_indicator--wind">
+					<span class="value">West, 5</span>m/s</p>
+				<p class="weather_indicator weather_indicator--pressure">
+					<span class="value">1050</span>hPa</p>
+			</div>
+		</div>
+		<img src="{{ path }}/images/clear-sky.png" alt="Clear sky" class="weather_image">
+
+
+		<div class="weather_temperature">
+			<span class="value">+25</span>
+			&deg;C</div>
+	</div>
+</div>
