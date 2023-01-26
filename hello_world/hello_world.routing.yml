@@ -1,0 +1,7 @@
+demoform:
+  path: "/hello_world/form/demo"
+  defaults:
+    _form: '\Drupal\hello_world\Form\DemoFromAlter'
+    _title: "DefaultForm"
+  requirements:
+    _access: "TRUE"
