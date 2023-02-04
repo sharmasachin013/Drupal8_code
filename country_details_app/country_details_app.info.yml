@@ -1,0 +1,5 @@
+name: 'Country Details App'
+type: module
+description: 'Country Details App'
+core: 8.x
+package: 'Custom'

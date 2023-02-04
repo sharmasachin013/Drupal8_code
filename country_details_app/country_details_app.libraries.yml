@@ -1,0 +1,7 @@
+globalcss:
+  version: 1.0
+  css:
+    theme:
+      css/custom.css: {}
+  js:
+    js/custom.js: {}

@@ -1,0 +1,7 @@
+country_details_app.country_details_controller_countryDetailsPage:
+  path: "/conterydetailspage"
+  defaults:
+    _controller: '\Drupal\country_details_app\Controller\CountryDetailsController::countryDetailsPage'
+    _title: "country Details Page"
+  requirements:
+    _permission: "access content"
