@@ -1,0 +1,5 @@
+name: 'Clear all caches using rest'
+type: module
+description: 'Clear all caches using rest'
+core: 8.x
+package: 'custom'

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains clear_all_caches_using_rest.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function clear_all_caches_using_rest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the clear_all_caches_using_rest module.
+    case 'help.page.clear_all_caches_using_rest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Clear all caches using rest') . '</p>';
+      return $output;
+
+    default:
+  }
+}
