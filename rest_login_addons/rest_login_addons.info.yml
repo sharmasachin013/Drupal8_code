@@ -1,0 +1,5 @@
+name: 'rest_login_addons'
+type: module
+description: 'rest login alter'
+core: 8.x
+package: 'Custom'

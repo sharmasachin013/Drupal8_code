@@ -1,0 +1,5 @@
+services:
+  rest_login_addons.route_subscriber:
+    class: Drupal\rest_login_addons\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

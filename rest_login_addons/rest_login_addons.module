@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains rest_login_addons.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rest_login_addons_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rest_login_addons module.
+    case 'help.page.rest_login_addons':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('rest login alter') . '</p>';
+      return $output;
+
+    default:
+  }
+}

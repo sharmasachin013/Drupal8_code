@@ -1,0 +1,9 @@
+
+rest_login_addons.rest_login_addons_controller_login:
+  path: '/rest_login_addons/login'
+  defaults:
+    _controller: '\Drupal\rest_login_addons\Controller\RestLoginAddonsController::loginNew'
+    _title: 'RestLoginAddonsController'
+  requirements:
+    _permission: 'access content'
+    
