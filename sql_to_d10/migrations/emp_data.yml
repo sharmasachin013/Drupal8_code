@@ -1,0 +1,96 @@
+# The machine name for a migration. Also used by various CLI tools when
+# referencing the migration as an argument for a command.
+id: emp_data
+
+# A human-friendly description of the migration. This is used by various UI and
+# CLI tools when showing a list of available migrations.
+label: Migrate list of emplyee
+
+# Optional group for the migration. This is a feature provided by the
+# migrate_plus module and allows for running an entire group of migrations
+# together.
+migration_group: empdata
+
+# Every migration must have a source plugin. Set this to the ID of the plugin to
+# use.
+#
+# This is the extract phase of your migration.
+#
+# For our custom migration this should be the source plugin we wrote.
+# \Drupal\baseball_migration\Plugin\migrate\source\BaseballPlayer The value here is
+# the ID value from the source plugin's annotation.
+source:
+  plugin: emp_data
+
+# Every migration must also have a destination plugin, which handles writing
+# the migrated data in the appropriate form for that particular kind of data.
+# This value should be the ID of the destination plugin to use.
+#
+# This is the load phase of your migration.
+destination:
+  plugin: entity:node
+
+# Here's the meat of the migration - the processing pipeline. This describes how
+# each destination field is to be populated based on the source data. For each
+# destination field, one or more process plugins may be invoked.
+#
+# This is the transform phase of your migration.
+process:
+  # Hardcode the destination node type (bundle) as 'player' using the
+  # 'default_value' process plugin.
+  type:
+    plugin: default_value
+    default_value: player
+
+  # Simple field mappings that require no extra processing can use the default
+  # 'get' process plugin. This just copies the value from the source to the
+  # destination. 'get' is the default when no plugin is defined, so you can just
+  # do destination_field: source_field.
+  #
+  # Our player content type in Drupal has a field named, 'field_player_weight'
+  # and our Source plugin defines a 'weight' field in its ::getFields() method.
+  # The destination field (or property) name goes on the left and the source
+  # field goes on the right.
+  field_player_weight: weight
+  field_player_height: height
+  field_player_given_name: nameGiven
+
+  # We generate the node.title (which we treat as the name) by concatenating
+  # two source fields together and putting a space between them using the
+  # 'concat' process plugin.
+  title:
+    plugin: concat
+    source:
+      - nameFirst
+      - nameLast
+    delimiter: " "
+
+  # Same thing with the title, concat these fields together using the
+  # 'concat' process plugin.
+  #field_player_birth:
+  #plugin: concat
+  #source:
+  #- birthMonth
+  #- birthDay
+  #- birthYear
+  #delimiter: /
+
+  # For death day we need to provide a default value in the case where the
+  # player hasn't died yet. Also provides an example of using multiple process
+  # plugins together. In this case we first use the 'concat' plugin to combine
+  # three fields from the source data, and then use the 'default_value' plugin
+  # to provide a default value for the field in the case that the previous step
+  # resulted in an empty value.
+  #field_player_death:
+  #- plugin: concat
+  #source:
+  # - deathMonth
+  # - deathDay
+  # - deathYear
+  #delimiter: /
+  # - plugin: default_value
+  #  default_value: ""
+
+# Declare optional dependencies on another migration for this migration.
+# This one has none.
+migration_dependencies: {}

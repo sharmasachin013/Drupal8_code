@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains sql_to_d10.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function sql_to_d10_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sql_to_d10 module.
+    case 'help.page.sql_to_d10':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('MIGRATE TO DRUPAL 10 FROM A SQL SOURCE') . '</p>';
+      return $output;
+
+    default:
+  }
+}

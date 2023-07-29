@@ -1,0 +1,8 @@
+name: "Sql to D10"
+type: module
+description: "MIGRATE TO DRUPAL 10 FROM A SQL SOURCE"
+core_version_requirement: ^8 || ^9 || ^10
+package: "Custom"
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus
