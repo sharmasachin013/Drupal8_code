@@ -1,0 +1,38 @@
+id: migrate_json_demo
+label: import terms from json
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - modules/custom/migrated_demo_csv/files/people.json
+  item_selector: data
+  fields:
+    - name: title
+      label: "title"
+      selector: playerID
+    - name: field_player_given_name
+      label: "nameGiven"
+      selector: nameGiven
+    - name: field_player_weight
+      label: "weight"
+      selector: weight
+    - name: field_player_height
+      label: "height"
+      selector: height
+  ids:
+    title:
+      type: string
+process:
+  title: title
+  field_player_weight: field_player_weight
+  field_player_height: field_player_height
+  field_player_given_name: field_player_given_name
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: player
+destination:
+  plugin: "entity:node"

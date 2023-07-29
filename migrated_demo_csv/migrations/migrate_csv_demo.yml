@@ -1,0 +1,22 @@
+id: migrate_csv_demo
+lable: migrate from csv file
+source:
+  plugin: csv
+  path: modules/custom/migrated_demo_csv/files/people.csv
+  delimiter: ","
+  header_offset: 0
+  ids:
+    - playerID
+process:
+  title: playerID
+  field_player_weight: weight
+  field_player_height: height
+  field_player_given_name: nameGiven
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: player
+destination:
+  plugin: "entity:node"

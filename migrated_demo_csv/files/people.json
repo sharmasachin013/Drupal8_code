@@ -1,0 +1,52 @@
+{
+  "data": [
+  {
+    "playerID": "29072023-01",
+    "nameFirst": "David",
+    "nameLast": "Aardsma",
+    "nameGiven": "David Allan",
+    "weight": 215,
+    "height": 75
+  },
+  {
+    "playerID": "29072023-02",
+    "nameFirst": "Hank",
+    "nameLast": "Aaron",
+    "nameGiven": "Henry Louis",
+    "weight": 180,
+    "height": 72
+  },
+  {
+    "playerID": "29072023-03",
+    "nameFirst": "Tommie",
+    "nameLast": "Aaron",
+    "nameGiven": "Tommie Lee",
+    "weight": 190,
+    "height": 75
+  },
+  {
+    "playerID": "29072023-04",
+    "nameFirst": "David",
+    "nameLast": "Aardsma",
+    "nameGiven": "David Allan",
+    "weight": 215,
+    "height": 75
+  },
+  {
+    "playerID": "2072023-05",
+    "nameFirst": "Hank",
+    "nameLast": "Aaron",
+    "nameGiven": "Henry Louis",
+    "weight": 180,
+    "height": 72
+  },
+  {
+    "playerID": "29072023-06",
+    "nameFirst": "Tommie",
+    "nameLast": "Aaron",
+    "nameGiven": "Tommie Lee",
+    "weight": 190,
+    "height": 75
+  }
+ ]
+}

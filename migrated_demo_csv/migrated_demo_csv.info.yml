@@ -1,0 +1,8 @@
+name: "migrated_demo_csv"
+type: module
+description: "migrated_content_csv"
+core_version_requirement: ^8 || ^9 || ^10
+package: "Custom"
+dependencies:
+  - drupal:migrate
+  - migrate_plus:migrate_plus

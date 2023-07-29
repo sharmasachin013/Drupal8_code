@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains migrated_demo_csv.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function migrated_demo_csv_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the migrated_demo_csv module.
+    case 'help.page.migrated_demo_csv':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('migrated_content_csv') . '</p>';
+      return $output;
+
+    default:
+  }
+}
